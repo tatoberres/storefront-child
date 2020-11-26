@@ -1,6 +1,6 @@
 /*
- Theme Name:   Storefront NewTheme
- Theme URI:    http://www.tatoberres.com/storefront-newtheme
+ Theme Name:   Storefront Child
+ Theme URI:    http://www.tatoberres.com/storefront-child
  Description:  Storefront Child Theme
  Author:       Tato Berres
  Author URI:   http://www.tatoberres.com
@@ -9,5 +9,423 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  storefront-child
+ Text Domain:  sfchild
 */
+
+/* 
+    FONTS :
+'Cormorant' 'Kodchasan' 'Crimson Text' 'Advent Pro'
+
+    COLORS :
+ gold #BF8E4E gold1 #CDA673 gold2 #DABE99 gold3 #E8D6BE
+ aubergine #402634 auber1 #60394E auber2 #804C68 auber3 #A05F82 auber-1 #2B1923
+ sand #D9BD9C sand1 #E2CDB5 sand2 #ECDECD sand3 #F5EEE6
+ cuivre #805440 cuivre1 #A26A51 cuivre2 #B7856F cuivre3 #C8A291
+ green #5A7358 green1 #71906E green2 #8DA68B green3 #A9BCA8 green-1 #435642
+ greyb1 #151312 greyb2 #272422 greyb3 #423C3A greyb4 #5E5551 greyb5 #827671
+ greyw1 #938782 greyw2 #AAA19E greyw3 #C2BCB9 greyw4 #DAD6D4 greyw5 #EAE7E6
+ rgba(142, 166, 140, 0.5)
+*/
+/* GENERALES*/
+body {
+    background-color: #ECDECD;
+    color: #5E5551;
+}
+body, p, button, input, textarea {
+    font-family: 'Crimson Text', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kodchasan', sans-serif;
+    color: #60394E;
+}
+h1, h1.entry-title {
+    font-size: 4em;
+    text-align: center;
+}
+.post-2 h1, .post-360 h1, .post-362 h1, .post-124 h1 {
+    font-family: 'Advent Pro', 'sans-serif';
+}
+.post-7 h1, .post-8 h1, .post-7 h2, .post-8 h2, .post-7 h3, .post-8 h3 {
+    font-family: 'Cormorant', 'sans-serif';
+}
+.entry-content p {
+    font-size: 1.4em;
+}
+a {
+    color: #60394E;
+}
+a:focus, .button.alt:focus {
+    outline-color: rgba(142, 166, 140, 0);
+}
+    /* Widgets */
+    .widget .widget-title {
+        font-family: 'Advent Pro', sans-serif;
+        font-weight: 500;
+        font-size: 1.7em;
+        color: #804C68;
+    }
+    .widget-area .widget a {
+        color: #827671;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.3em;
+    }
+    /* Textos principales */
+    div.entry-content p, .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content a._blank {
+        color: #5E5551;
+    }
+     /* Imagenes de paginas interiores */
+     img.size-woocommerce_thumbnail, img.wp-post-image, img.wp-image-64, img.wp-image-63 {
+        border-radius: 15px;
+    }
+    /* Botones */
+    .hentry .entry-content li.wc-block-grid__product div.wp-block-button a.add_to_cart_button, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+    .botoncito-yoga div.wp-block-button a.add_to_cart_button, .storefront-align-wide.page-template-template-fullwidth-php .post-184 .wp-block-buttons a.wp-block-button__link,
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .wp-block-button a.wp-block-button__link, .product button.single_add_to_cart_button,
+    .product a.button, section.storefront-sticky-add-to-cart a.storefront-sticky-add-to-cart__content-button, .wc-proceed-to-checkout a.checkout-button,
+    .woocommerce .return-to-shop a.button, button.alt, .button.alt {
+        background-color: #402634;
+        color: #CDA673;
+        border-radius: 10px;
+        font-size: 1.15em;
+    }
+        /* Boton Hover */
+        .hentry .entry-content li.wc-block-grid__product div.wp-block-button a.add_to_cart_button:hover, .product a.button:hover, .woocommerce-error .button:hover, .button.alt:hover, button.alt:hover {
+            background-color: #60394E;
+            color: #BF8E4E;
+        }
+        /* menu mobile */
+        button.menu-toggle {
+            background-color: #DABE99;
+            color: #2B1923;
+        }
+        button.menu-toggle:hover {
+            background-color: #CDA673;
+        }
+        button:focus {
+            outline-color: rgba(142, 166, 140, 0);
+        }
+   
+/* HEADER */
+header.site-header, .site-header {
+    background-color: #402634;
+    border-bottom: 0px;
+}
+.site-title a, .site-branding h1 a, .site-branding .site-description {
+    color: #5A7358;
+    font-size: 1.2em;
+    font-family: 'Crimson-Text', 'sans-serif';
+}
+.woocommerce-breadcrumb, .woocommerce-breadcrumb a {
+    font-size: 1em;
+    color: #827671;
+}
+        /* Navigation */
+        .main-navigation ul li a {
+            font-family: 'Cormorant', sans-serif;
+            font-size: 1.3em;
+            color: #BF8E4E;
+        }
+        .secondary-navigation ul.menu a {
+            font-family: 'Cormorant', sans-serif;
+            font-size: 1.2em;
+            color: #BF8E4E;
+        }
+        .main-navigation ul li a:hover, .main-navigation ul li:hover > a, .site-title a:hover, .site-header ul.menu li.current-menu-item > a,
+        .secondary-navigation ul.menu a:hover {
+            color:#D9BD9C;
+        }
+        /* menus mobile */
+        .storefront-handheld-footer-bar ul li > a, .storefront-handheld-footer-bar ul li > a:before, .site-footer .storefront-handheld-footer-bar a:not(.button):not(.components-button),
+        .storefront-handheld-footer-bar {
+            background-color: #D9BD9C;
+            color: #60394E;
+            border-top: 1px solid #E2CDB5;
+        }
+        .storefront-handheld-footer-bar ul li.cart .count {
+            background-color: #805440;
+            color: #ECDECD;
+            border-color: #ECDECD;
+        }
+
+/* FOOTER */
+.site-footer {
+    background-color: #402634;
+    color: #BF8E4E;
+}
+.site-footer span.widget-title, .site-footer .widget .widget-title {
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(129, 85, 65, 0.3);
+    padding-bottom: 0.5em;
+    color: #5A7358;
+}
+.site-footer p {
+    font-size: 1.1em;
+    margin-bottom: 0.7em;
+}
+.footer-widgets {
+    border-bottom: 1px solid rgba(129, 85, 65, 0.3);
+}
+div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-button) {
+    text-decoration: none;
+    font-family: 'Cormorant', sans-serif;
+    font-size: 1.1em;
+    color: #805440;
+}
+
+/* LANDING PAGE */
+    /* Espacios entre secciones */
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .sndo-bloque, .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .qnto-bloque, 
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .wc-block-featured-product, .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .pt-cv-wrapper {
+        margin-bottom: 4.2em;
+    }
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .qnto-bloque, .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .wc-block-featured-product,
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .pt-cv-wrapper {
+        padding: 0px;
+    }
+    /* border radius imagenes */
+    .post-184 .entry-content .sndo-bloque, .post-184 .entry-content .ter-bloque, .wp-block-cover.has-background-dim:not(.has-background-gradient):before, .post-184 .entry-content .cto-bloque,
+    .post-184 div.has-background-dim, .wc-block-featured-product.has-background-dim:before,
+    .post-184 p.oct-bloque, .post-184 a.sbi_photo {
+        border-radius: 3px;
+    }
+    /* titulos de 6 7 8 9 */
+    h1.tit-seis, h1.tit-siete, h1.tit-ocho, h1.tit-nueve {
+        font-family: 'Cormorant', sans-serif;
+    } 
+    /* tamanos titulos bloque 2 3 4 */
+    .post-184 h1, article.hentry.post-184 div.wp-block-cover.ter-bloque h1, article.hentry.post-184 div.wp-block-cover.cto-bloque h1 {
+        font-size: 4em;
+    }
+    /* 1er bloque */
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content div.pmer-bloquecito.imagen-inicio {
+        height: 45vw;
+        border-radius: 0px;
+    }
+        /* autor */
+        .post-184 .entry-content .wp-block-cover__inner-container em {
+            font-weight: 600;
+        }
+    /* 2ndo */
+    .post-184 .sndo-bloque h1 {
+    text-align: right;
+    padding-top: 0.5em;
+    }
+    @media screen and (max-width: 650px) {
+        .post-184 .sndo-bloque h1, article.hentry.post-184 div.wp-block-cover.cto-bloque h1 {
+            font-size: 3em;
+        }
+    }
+    /*fondo transparencia bloque quien soy */
+    .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .sndo-bloque {
+        padding-left: 0px;
+        background-color: rgba(200, 164, 146, 0.5);
+    }
+    /* 3er y 4to bloques */
+    .post-184 .entry-content .wp-block-cover .wp-block-cover__inner-container {
+        width: 65vw;
+        max-width: 65vw;
+    }
+    /* titulos */
+    .wp-block-cover .wp-block-cover__inner-container h1:not(.has-text-color) {
+        color: #e8d6be;
+    }
+    article.hentry.post-184 div.wp-block-cover.ter-bloque h1 {
+        text-align: left;
+    }
+    article.hentry.post-184 div.wp-block-cover.cto-bloque h1 {
+        text-align: right;
+    }
+    /* 5to bloque */
+    .post-184 .qnto-bloque p.has-large-font-size {
+        font-family: 'Crimson-Text', 'sans-serif';
+        font-size: 2em;
+    }
+    /* 6to bloque masaje del mes */
+    h1.tit-seis {
+        margin: 0px;
+        padding: 20px 38px;
+        background-color: rgba(219, 190, 154, 0.5);
+    }
+    .post-184 .wc-block-featured-product .wc-block-featured-product__title {
+        font-family: 'Crimson-Text', 'sans-serif';
+        color: #e8d6be;
+        font-size: 2.5em;
+    }
+    .post-184 .wc-block-featured-product .wc-block-featured-product__price {
+        color: #DABE99;
+        font-size: 1.3em;
+    }
+    /* 7o bloque Grille du Blog */
+    h1.tit-siete {
+        margin-top: 1.5em;
+    }
+    .post-184 .wp-block-separator.siete-separator {
+        background-color: #804C68;
+        margin-bottom: 2.5em;
+        height: 2px;
+    }
+    .post-184 .pt-cv-wrapper .pagination>.active>a {
+        background-color: #402634;
+        color: #BF8E4E;
+    }
+    .post-184 .pt-cv-wrapper .pagination>li>a {
+        background-color: #DABE99;
+        color: #402634;
+    }
+    /* 8vo bloque */
+    .post-184 figure.ocho-bloque {
+        background-color: #71906E;
+        border: 0px;
+        box-shadow: 0px 5px 5px 2px rgba(68, 86, 67, 0.3);
+    }
+    .post-184 figure.ocho-bloque a {
+        color: #435642;
+        text-decoration: none;
+    }
+    .post-184 figure.ocho-bloque a:hover {
+        color: #5A7358;
+    }
+    .post-184 figure.wp-block-pullquote.ocho-bloque p  {
+        color: #ECDECD;
+        font-style: normal;
+        font-size: 3em;
+    }
+    .post-184 figure.ocho-bloque cite {
+        color: #ECDECD;
+        font-size: 2em;
+        text-transform: none;
+    }
+    /* 9 bloque */
+    .post-184 .tit-nueve {
+        margin-top: 1.5em;
+    }
+    
+/* PAGE QUIEN SOY ? */
+.post-2 .wp-block-quote {
+    border-left: 6px solid #C8A291;
+}
+
+/* PAGE CONTACTO */
+.post-124 .entry-content hr.wp-block-separator {
+    background-color: #5A7358 ;
+}
+.post-124 .entry-content a {
+    color: #A26A51;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* PAGE PRODUCTS YOGA & MASAGES */
+    /* Titulo */
+    .products .product h2.woocommerce-loop-product__title {
+        font-family: 'Crimson-Text', 'sans-serif';
+        color: #805440;
+    }
+    div.wc-block-grid__product-title, .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+        font-family: 'Crimson-Text', 'sans-serif';
+        font-size: 1.5em;
+        color: #805440;
+        font-weight: 600;
+    }
+    /* Precio */
+    section.storefront-sticky-add-to-cart, section.storefront-sticky-add-to-cart span.amount {
+        background-color: #E2CDB5;
+        color: #5E5551;
+    }
+    .wc-block-grid__products .wc-block-grid__product .price {
+        color: #5E5551;
+        font-size: 1.2em;
+    }
+/* BLOG */
+.blog h1 {
+    text-align: left;
+}
+.post-334 .alpha a {
+    color: #60394E;
+}
+.post-334 .cat-links a, .post-334 .posted-on {
+    text-decoration: none;
+    color: #827671;
+}
+/* CARRITO */
+/* gold3 E8D6BE cuivre3 #C8A291 sand 3 #F5EEE6 grisw5 EAE7E6 */
+/* recapitulativo */
+.post-7 table:not( .has-background ) th {
+    background-color: #C8A291;
+}
+.post-7 table:not( .has-background ) tbody td {
+    background-color: #F5EEE6;
+}
+.post-7 img.size-woocommerce_thumbnail {
+    border-radius: 3px;
+}
+.post-7 table.cart td.actions {
+    border-top-color: #F5EEE6;
+    background-color: #C8A291;
+}
+/* subtotal */
+.post-7 table:not( .has-background ) .cart-subtotal th, .post-7 table:not( .has-background ) .cart-subtotal td {
+    background-color: #F5EEE6;
+}
+/* total */
+.post-7 table.shop_table_responsive tbody th, .post-7 .cart_totals table.shop_table_responsive tbody tr:nth-child(2n) td {
+    background-color: #C8A291;
+}
+/* FINALIZAR COMPRA */
+.post-8 #order_review {
+    background-color: #F5EEE6;
+}
+/* recapitulativo */
+.post-8 table:not( .has-background ) th.product-name, .post-8 table:not( .has-background ) th.product-total {
+    background-color: #F5EEE6;
+    font-weight: 600;
+}
+.post-8 table:not( .has-background ) td.product-name, .post-8 table:not( .has-background ) td.product-total {
+    background-color: #E8D6BE;
+}
+/* subtotal */
+.post-8 table:not( .has-background ) tr.cart-subtotal th, .post-8 table:not( .has-background ) tr.cart-subtotal td {
+    background-color: #F5EEE6;
+}
+/* total */
+.post-8 table.shop_table tfoot th, .post-8 table.shop_table tfoot tr:nth-child(2n) td {
+    background-color: #C8A291;
+}
+/* paypal */
+.post-8 #payment .payment_methods > li:not(.woocommerce-notice) {
+    background-color: #EAE7E6;
+}
+/* otras notas de finalizar compra */
+.post-8 #payment .payment_methods > li .payment_box, .post-8 #payment .place-order {
+    background-color: #F5EEE6;
+}
+/* AVISOS */
+    /* Error */
+    ul.woocommerce-error, .woocommerce-error .button, .woocommerce-notices-wrapper div.woocommerce-message, .woocommerce-notices-wrapper div.woocommerce-message a,
+    .woocommerce-message:before, .woocommerce-error:before, .woocommerce .woocommerce-info, .woocommerce-info:before {
+        background: #60394E;
+        color: #CDA673;
+    }
+     /* Aviso agregado a carrito */
+     .hentry .entry-content .added_to_cart, .product a.added_to_cart {
+        text-decoration: none;
+        background: #60394E;
+        background-color: #60394E;
+        color: #CDA673;
+        border-radius: 10px;
+    }
+    /* Banner con anuncio general del sitio */
+    .woocommerce-store-notice, .demo_store {
+        background-color: #D9BD9C;
+        color: #402634;
+    }
+    .demo_store a {
+        color: #F5EEE6;
+    }
+    
+/* FALTA:
+terminar el wp admin
+ver control de svg
