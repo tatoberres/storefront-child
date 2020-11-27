@@ -204,6 +204,9 @@ div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-butt
         height: 45vw;
         border-radius: 0px;
     }
+    .post-184 .wp-block-cover.pmer-bloquecito .wp-block-cover__inner-container p:not(.has-small-font-size):not(.has-medium-font-size):not(.has-large-font-size):not(.has-huge-font-size) {
+        font-size: 3em;
+    }
         /* autor */
         .post-184 .entry-content .wp-block-cover__inner-container em {
             font-weight: 600;
@@ -212,11 +215,6 @@ div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-butt
     .post-184 .sndo-bloque h1 {
     text-align: right;
     padding-top: 0.5em;
-    }
-    @media screen and (max-width: 650px) {
-        .post-184 .sndo-bloque h1, article.hentry.post-184 div.wp-block-cover.cto-bloque h1 {
-            font-size: 3em;
-        }
     }
     /*fondo transparencia bloque quien soy */
     .storefront-align-wide.page-template-template-fullwidth-php .post-184 .entry-content .sndo-bloque {
@@ -302,7 +300,17 @@ div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-butt
     .post-184 .tit-nueve {
         margin-top: 1.5em;
     }
-    
+    @media screen and (max-width: 650px) {
+        .post-184 .sndo-bloque h1, article.hentry.post-184 div.wp-block-cover.cto-bloque h1 {
+            font-size: 2.6em;
+        }
+        .post-184 .wp-block-cover.pmer-bloquecito .wp-block-cover__inner-container p:not(.has-small-font-size):not(.has-medium-font-size):not(.has-large-font-size):not(.has-huge-font-size) {
+            font-size: 2em;
+        }
+        .post-184 h1{
+            font-size: 3em;
+        }
+    }
 /* PAGE QUIEN SOY ? */
 .post-2 .wp-block-quote {
     border-left: 6px solid #C8A291;
