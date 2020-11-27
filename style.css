@@ -153,6 +153,9 @@ header.site-header, .site-header {
     background-color: #402634;
     color: #BF8E4E;
 }
+.footer-widgets {
+    border-bottom: 1px solid rgba(129, 85, 65, 0.3);
+}
 .site-footer span.widget-title, .site-footer .widget .widget-title {
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.6em;
@@ -164,9 +167,6 @@ header.site-header, .site-header {
 .site-footer p {
     font-size: 1.1em;
     margin-bottom: 0.7em;
-}
-.footer-widgets {
-    border-bottom: 1px solid rgba(129, 85, 65, 0.3);
 }
 div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-button) {
     text-decoration: none;
@@ -309,6 +309,14 @@ div.site-info, div.site-info a, .site-footer a:not(.button):not(.components-butt
         }
         .post-184 h1{
             font-size: 3em;
+        }
+        /* .site-footer span.widget-title, .site-footer .widget .widget-title {
+           margin-top: 0.8em;
+           padding-top: 0.8em;
+        } */
+        .site-footer .footer-widgets div.textwidget {
+            padding-bottom: 1em;
+            margin-bottom: 1em;
         }
     }
 /* PAGE QUIEN SOY ? */
